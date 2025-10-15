@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skolans Historia – Östra Real</title>
+  <!-- Tailwind via CDN (no install) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <meta name="description" content="Entreprenörsprojekt: Vi förnyar Östra Reals historietavla och gör en modern webbplats.">
+  <style>
+    /* Liten, mjuk animation utan extra bibliotek */
+    .fade-up { opacity: 0; transform: translateY(12px); animation: fadeUp .6s ease-out forwards; }
+    .fade-up.delay-1 { animation-delay: .1s; }
+    .fade-up.delay-2 { animation-delay: .2s; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    .bg-art {
+      background-image:
+        radial-gradient(circle at 30% 20%, rgba(253, 230, 138, 0.9) 0, transparent 55%),
+        radial-gradient(circle at 70% 60%, rgba(254, 202, 202, 0.9) 0, transparent 55%);
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-neutral-50 to-white text-neutral-900">
+  <!-- Nav -->
+  <header class="sticky top-0 z-30 backdrop-blur bg-white/70 border-b">
+    <nav class="mx-auto max-w-6xl flex items-center justify-between px-4 py-3">
+      <a href="#top" class="flex items-center gap-2 font-semibold">
+        <i data-lucide="school" class="w-5 h-5"></i>
+        <span>Skolans Historia – Östra Real</span>
+      </a>
+      <div class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#projekt" class="hover:underline">Projektet</a>
+        <a href="#tidslinje" class="hover:underline">Tidslinje</a>
+        <a href="#team" class="hover:underline">Team</a>
+        <a href="#galleri" class="hover:underline">Galleri</a>
+        <a href="#kontakt" class="hover:underline">Kontakt</a>
+      </div>
+      <a href="#kontakt" class="md:inline-block hidden"><button class="px-4 py-2 bg-black text-white rounded-2xl">Kontakta oss</button></a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute -top-24 left-1/2 -translate-x-1/2 h-96 w-[60rem] rounded-full blur-3xl bg-orange-200/60"></div>
+      <div class="absolute -bottom-24 right-1/3 h-96 w-[50rem] rounded-full blur-3xl bg-yellow-200/60"></div>
+    </div>
+    <div class="mx-auto max-w-6xl px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
+      <div class="fade-up">
+        <span class="inline-block text-xs font-medium bg-black text-white px-2 py-1 rounded-full mb-4">Entreprenörskap 100p</span>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
+          Vi berättar Östra Reals historia –
+          <span class="block">som engagerar idag.</span>
+        </h1>
+        <p class="mt-5 text-lg text-neutral-700 max-w-prose">
+          Uppdrag: förnya historietavlan i entrén och skapa en modern webbplats som levandegör berättelser,
+          bilder och milstolpar.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#projekt"><button class="px-5 py-3 bg-black text-white rounded-2xl">Läs om projektet</button></a>
+          <a href="#galleri"><button class="px-5 py-3 border rounded-2xl">Se skisser</button></a>
+        </div>
+        <div class="mt-6 flex items-center gap-6 text-sm text-neutral-600">
+          <span class="flex items-center gap-2"><i data-lucide="users" class="w-4 h-4"></i> Isabel, Noel, Anna, Sofie</span>
+          <span class="flex items-center gap-2"><i data-lucide="calendar" class="w-4 h-4"></i> HT 2025</span>
+          <span class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Östra Real, Stockholm</span>
+        </div>
+      </div>
+      <div class="relative fade-up delay-1">
+        <div class="aspect-video rounded-3xl border shadow-sm bg-gradient-to-br from-orange-100 via-amber-50 to-yellow-100 p-2">
+          <div class="h-full w-full rounded-2xl bg-art flex items-center justify-center">
+            <div class="text-center p-6">
+              <i data-lucide="sparkles" class="w-10 h-10 mx-auto mb-3"></i>
+              <p class="font-medium">Konceptbild: "Höst vid Östra Real"</p>
+              <p class="text-sm text-neutral-600">Färgstark, målad känsla, frontvy, varm solnedgång.</p>
+            </div>
+          </div>
+        </div>
+        <!-- litet statuskort -->
+        <div class="absolute -bottom-6 -right-6 hidden md:block">
+          <div class="rounded-2xl shadow-lg border bg-white">
+            <div class="px-4 pt-4 pb-2 text-xs text-neutral-500">Snabbstatus</div>
+            <div class="px-4 font-semibold">Projektläge</div>
+            <div class="px-4 pb-4 text-sm text-neutral-700">
+              <ul class="list-disc pl-5 space-y-1">
+                <li>✓ Uppdrag bekräftat</li>
+                <li>✓ Research pågår</li>
+                <li>▢ Galleri under uppbyggnad</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projektet -->
+  <section id="projekt" class="mx-auto max-w-6xl px-4 py-16">
+    <div class="grid md:grid-cols-3 gap-6 items-start">
+      <div class="md:col-span-2 border rounded-2xl bg-white">
+        <div class="p-6">
+          <h2 class="text-2xl font-bold">Syfte & mål</h2>
+          <p class="text-neutral-500 mb-4">Varför vi gör detta – och vad vi vill uppnå.</p>
+          <div class="space-y-4 text-neutral-800">
+            <p>
+              Tavlan i entrén är idag utdaterad. Vi vill skapa en ny, tydlig och estetiskt
+              stark version som lyfter Östra Reals historia och betydelse. Webbplatsen blir
+              ett levande komplement med fördjupningar, bildmaterial och plats för framtida
+              klasser att lägga till nytt innehåll.
+            </p>
+            <ul class="list-disc pl-5 space-y-2">
+              <li>En modern, hållbar tavla med tydlig typografi och bildspråk.</li>
+              <li>En webb som berättar skolans historia med tidslinje, foto och källor.</li>
+              <li>Insamlad feedback från elever, lärare och alumner vid lansering.</li>
+            </ul>
+            <div class="flex gap-3 pt-2">
+              <a href="#tidslinje"><button class="px-4 py-2 bg-black text-white rounded-2xl flex items-center gap-2">Se planen <span>→</span></button></a>
+              <a href="#resurser"><button class="px-4 py-2 border rounded-2xl">Projektresurser</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border rounded-2xl bg-white">
+        <div class="p-6 text-sm space-y-2">
+          <h3 class="font-semibold">Fakta</h3>
+          <p class="text-neutral-500">Snabbinfo om projektet</p>
+          <div class="flex justify-between"><span>Handledare</span><strong>Christina Gunnarsson</strong></div>
+          <div class="flex justify-between"><span>Kurs</span><strong>Entreprenörskap 100p</strong></div>
+          <div class="flex justify-between"><span>Skola</span><strong>Östra Real</strong></div>
+          <div class="flex justify-between"><span>Period</span><strong>HT 2025 – VT 2026</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tidslinje -->
+  <section id="tidslinje" class="bg-neutral-50 border-t">
+    <div class="mx-auto max-w-6xl px-4 py-16">
+      <div class="mb-8">
+        <h2 class="text-3xl font-bold">Tidslinje</h2>
+        <p class="text-neutral-600">Nyckelsteg från start till lansering.</p>
+      </div>
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="border rounded-2xl bg-white p-6">
+          <span class="text-xs bg-neutral-100 px-2 py-1 rounded">Okt 2025</span>
+          <h3 class="text-xl font-semibold mt-2">Start & Research</h3>
+          <p class="text-sm text-neutral-700 mt-2">Intervjuer, källjakt och planering av innehåll.</p>
+        </div>
+        <div class="border rounded-2xl bg-white p-6">
+          <span class="text-xs bg-neutral-100 px-2 py-1 rounded">Nov 2025</span>
+          <h3 class="text-xl font-semibold mt-2">Design & Prototyp</h3>
+          <p class="text-sm text-neutral-700 mt-2">Layout, färgpalett och mockups för tavla + webb.</p>
+        </div>
+        <div class="border rounded-2xl bg-white p-6">
+          <span class="text-xs bg-neutral-100 px-2 py-1 rounded">Dec 2025</span>
+          <h3 class="text-xl font-semibold mt-2">Produktion</h3>
+          <p class="text-sm text-neutral-700 mt-2">Slutgiltig tavla, copy och publicering av webbplats.</p>
+        </div>
+        <div class="border rounded-2xl bg-white p-6">
+          <span class="text-xs bg-neutral-100 px-2 py-1 rounded">Jan 2026</span>
+          <h3 class="text-xl font-semibold mt-2">Lansering & Utvärdering</h3>
+          <p class="text-sm text-neutral-700 mt-2">Invigning i entrén och insamling av feedback.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section id="team" class="mx-auto max-w-6xl px-4 py-16">
+    <div class="mb-8">
+      <h2 class="text-3xl font-bold">Teamet</h2>
+      <p class="text-neutral-600">Vi i åk 2 som driver projektet.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="border rounded-2xl bg-white p-6 text-center">
+        <div class="h-20 w-20 rounded-full bg-orange-200 mx-auto flex items-center justify-center text-xl font-bold">IR</div>
+        <h3 class="text-lg font-semibold mt-2">Isabel Rönnlund</h3>
+        <p class="text-neutral-600 text-sm">Projektledare</p>
+      </div>
+      <div class="border rounded-2xl bg-white p-6 text-center">
+        <div class="h-20 w-20 rounded-full bg-orange-200 mx-auto flex items-center justify-center text-xl font-bold">NJ</div>
+        <h3 class="text-lg font-semibold mt-2">Noel Jeppsson</h3>
+        <p class="text-neutral-600 text-sm">Design & produktion</p>
+      </div>
+      <div class="border rounded-2xl bg-white p-6 text-center">
+        <div class="h-20 w-20 rounded-full bg-orange-200 mx-auto flex items-center justify-center text-xl font-bold">AW</div>
+        <h3 class="text-lg font-semibold mt-2">Anna Wirén</h3>
+        <p class="text-neutral-600 text-sm">Research & text</p>
+      </div>
+      <div class="border rounded-2xl bg-white p-6 text-center">
+        <div class="h-20 w-20 rounded-full bg-orange-200 mx-auto flex items-center justify-center text-xl font-bold">SE</div>
+        <h3 class="text-lg font-semibold mt-2">Sofie Eidfelt</h3>
+        <p class="text-neutral-600 text-sm">Koordinering & foto</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galleri -->
+  <section id="galleri" class="bg-neutral-50 border-y">
+    <div class="mx-auto max-w-6xl px-4 py-16">
+      <div class="mb-8 flex items-end justify-between">
+        <div>
+          <h2 class="text-3xl font-bold">Galleri & skisser</h2>
+          <p class="text-neutral-600">Förhandsvisningar av tavlan och färgteman.</p>
+        </div>
+        <button class="px-4 py-2 border rounded-2xl">Lägg till bild</button>
+      </div>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="aspect-[4/3] rounded-2xl border bg-gradient-to-br from-orange-100 via-amber-50 to-yellow-100 p-2">
+          <div class="h-full w-full rounded-xl bg-art"></div>
+        </div>
+        <div class="aspect-[4/3] rounded-2xl border bg-gradient-to-br from-orange-100 via-amber-50 to-yellow-100 p-2">
+          <div class="h-full w-full rounded-xl bg-art"></div>
+        </div>
+        <div class="aspect-[4/3] rounded-2xl border bg-gradient-to-br from-orange-100 via-amber-50 to-yellow-100 p-2">
+          <div class="h-full w-full rounded-xl bg-art"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resurser -->
+  <section id="resurser" class="mx-auto max-w-6xl px-4 py-16">
+    <div class="mb-8">
+      <h2 class="text-3xl font-bold">Resurser</h2>
+      <p class="text-neutral-600">Mallfiler och dokumentation</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="border rounded-2xl bg-white">
+        <div class="p-6">
+          <h3 class="font-semibold">Projektplan (PDF)</h3>
+          <p class="text-neutral-600">Sammanfattning av mål, scope och tidsplan.</p>
+          <a href="#" class="inline-flex items-center gap-2 mt-3 px-3 py-2 border rounded-2xl">Ladda ner</a>
+        </div>
+      </div>
+      <div class="border rounded-2xl bg-white">
+        <div class="p-6">
+          <h3 class="font-semibold">Brand kit</h3>
+          <p class="text-neutral-600">Färger, typografi och bildexempel.</p>
+          <a href="#" class="inline-flex items-center gap-2 mt-3 px-3 py-2 border rounded-2xl">Ladda ner</a>
+        </div>
+      </div>
+      <div class="border rounded-2xl bg-white">
+        <div class="p-6">
+          <h3 class="font-semibold">Press & copy</h3>
+          <p class="text-neutral-600">Texter för sociala medier och affischer.</p>
+          <a href="#" class="inline-flex items-center gap-2 mt-3 px-3 py-2 border rounded-2xl">Ladda ner</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontakt -->
+  <section id="kontakt" class="mx-auto max-w-6xl px-4 py-16">
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+      <div>
+        <h2 class="text-3xl font-bold">Kontakt</h2>
+        <p class="text-neutral-600 mt-2">Hör av dig om du vill bidra med material, minnen eller frågor.</p>
+        <div class="mt-6 space-y-3 text-sm text-neutral-700">
+          <div class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> skolanshistoria@ostrareal.se</div>
+          <div class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Karlavägen 79, Stockholm</div>
+        </div>
+      </div>
+      <div class="border rounded-2xl bg-white">
+        <div class="p-6">
+          <h3 class="font-semibold">Skicka meddelande</h3>
+          <p class="text-neutral-600 text-sm">Fyll i formuläret så återkommer vi.</p>
+          <form class="space-y-3" onsubmit="alert('Tack! Vi hör av oss.'); return false;">
+            <input class="w-full border rounded-lg px-3 py-2" placeholder="Ditt namn" required>
+            <input type="email" class="w-full border rounded-lg px-3 py-2" placeholder="Din e‑post" required>
+            <textarea class="w-full border rounded-lg px-3 py-2" rows="5" placeholder="Meddelande" required></textarea>
+            <button class="px-4 py-2 bg-black text-white rounded-2xl">Skicka</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t">
+    <div class="mx-auto max-w-6xl px-4 py-10 text-sm text-neutral-600 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p>© <span id="year"></span> Skolans Historia – Östra Real</p>
+      <div class="flex items-center gap-6">
+        <a href="#projekt" class="hover:underline">Om</a>
+        <a href="#resurser" class="hover:underline">Resurser</a>
+        <a href="#kontakt" class="hover:underline">Kontakt</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    lucide.createIcons();
+  </script>
+</body>
+</html>
