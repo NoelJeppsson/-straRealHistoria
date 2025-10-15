@@ -4,16 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Skolans Historia – Östra Real</title>
-
-  <!-- Stoppar “evig laddning” pga favicon -->
-  <link rel="icon" href="data:," />
-
-  <!-- Tailwind (kan laddas defer också) -->
-  <script defer src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Lucide icons – ladda med defer så den inte blockerar -->
-  <script defer src="https://unpkg.com/lucide@0.462.0/dist/umd/lucide.min.js"></script>
-
+  <!-- Tailwind via CDN (no install) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
   <meta name="description" content="Läs Östra Reals historia, se tavlan och ta del av källmaterial. En del av Entreprenörsprojektet.">
   <style>
     .fade-up { opacity: 0; transform: translateY(12px); animation: fadeUp .6s ease-out forwards; }
@@ -27,7 +21,6 @@
     .toc a.active{background:#f4f4f5}
   </style>
 </head>
-
 <body class="min-h-screen bg-gradient-to-b from-neutral-50 to-white text-neutral-900">
   <!-- Nav -->
   <header class="sticky top-0 z-30 backdrop-blur bg-white/70 border-b">
@@ -268,4 +261,4 @@
   </script>
 </body>
 </html>
-<!-- deploy nudge -->
+
